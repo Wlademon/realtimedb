@@ -1,0 +1,23 @@
+{
+  "name": "wladoseid/realtimedb",
+  "description": "description_text",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Wladoseid",
+      "email": "wladoseid@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "2.0.*"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "wladoseid\\realtimedb\\": "src"
+    }
+  }
+}
