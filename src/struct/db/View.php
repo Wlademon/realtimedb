@@ -4,6 +4,8 @@
 namespace wladoseid\realtimedb\struct\db;
 
 
-class View {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class View extends Constructor {
 	
 }

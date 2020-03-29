@@ -4,6 +4,11 @@
 namespace wladoseid\realtimedb\struct\db;
 
 
-class Type {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class Type extends Constructor {
 	
+	public function convertTo():array {
+	
+	}
 }

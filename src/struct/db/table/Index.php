@@ -4,6 +4,8 @@
 namespace wladoseid\realtimedb\struct\db\table;
 
 
-class Index {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class Index extends Constructor {
 	
 }

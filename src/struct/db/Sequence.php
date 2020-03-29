@@ -4,6 +4,8 @@
 namespace wladoseid\realtimedb\struct\db;
 
 
-class Sequence {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class Sequence extends Constructor {
 	
 }

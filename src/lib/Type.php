@@ -48,4 +48,13 @@ abstract class Type {
 			self::FLOAT => DbType::tyPhpFloat()
 		];
 	}
+	
+	public static function allTypes():array {
+		return [
+			self::STRING,
+			self::FLOAT,
+			self::BOOLEAN,
+			self::INTEGER
+		];
+	}
 }

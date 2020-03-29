@@ -4,6 +4,8 @@
 namespace wladoseid\realtimedb\struct\db;
 
 
-class Procedure {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class Procedure extends Constructor {
 	
 }

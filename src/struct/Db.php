@@ -4,9 +4,11 @@
 namespace wladoseid\realtimedb\struct;
 
 
-class Db {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class Db extends Constructor {
 	
-	public function __construct(string $name) {
+	public function __construct($db) {
 	
 	}
 	

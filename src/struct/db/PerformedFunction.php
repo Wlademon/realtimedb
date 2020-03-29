@@ -3,6 +3,8 @@
 namespace wladoseid\realtimedb\struct\db;
 
 
-class PerformedFunction {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class PerformedFunction extends Constructor {
 	
 }

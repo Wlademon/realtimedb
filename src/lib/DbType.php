@@ -142,4 +142,53 @@ abstract class DbType {
 		return self::tyPhpString();
 	}
 	
+	public static function allTypes():array {
+		return self::tyPhpString();
+	}
+	
+	public static function phpToDb(string $type, ?int $size, ?int $fraction = null):?string {
+		if (!in_array($type, Type::allTypes())) {
+			throw new \Exception(); // todo: Дописать ошибку
+		}
+		if ($type === Type::INT) {
+			return self::phpIntToDbInt($size);
+		}
+		if ($type === Type::STRING) {
+			return self::phpStringToDbString($size);
+		}
+		if ($type === Type::BOOLEAN) {
+			return self::phpBoolToDbBool();
+		}
+		
+		return self::phpFloatToDbFloat($size, $fraction);
+	}
+	
+	public static function phpIntToDbInt(?int $size):?string {
+		if (!$size) {
+			return self::BIGINT;
+		}
+		if ($size <= 4) {
+			return self::SMALLINT;
+		}
+		if ($size <= 9) {
+			return self::INT;
+		}
+		if ($size <= 18) {
+			return self::BIGINT;
+		}
+		
+		return null;// todo: подумать над переходом в другие типы
+	}
+	
+	public static function phpFloatToDbFloat(?int $size, ?int $fraction = null) {
+		return self::NUMERIC;// todo: доделать потом
+	}
+	
+	public static function phpStringToDbString(?int $size, bool $binary = false) {
+		return self::TEXT; // todo: доделать потом
+	}
+	
+	public static function phpBoolToDbBool() {
+		return self::BOOLEAN;
+	}
 }

@@ -4,6 +4,8 @@
 namespace wladoseid\realtimedb\struct\db\table;
 
 
-class Trigger {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class Trigger extends Constructor {
 	
 }

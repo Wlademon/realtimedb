@@ -4,6 +4,8 @@
 namespace wladoseid\realtimedb\struct\db\table;
 
 
-class Constraint {
+use wladoseid\realtimedb\constructor\Constructor;
+
+class Constraint extends Constructor {
 	
 }

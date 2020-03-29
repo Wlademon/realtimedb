@@ -4,7 +4,11 @@
 namespace wladoseid\realtimedb\struct\db\table;
 
 
-class Column {
+use wladoseid\realtimedb\constructor\Constructor;
+use wladoseid\realtimedb\interfaces\ColumnInterface;
+use wladoseid\realtimedb\struct\db\Table;
+
+class Column extends Constructor implements ColumnInterface {
 	
 	private $_name;
 	
@@ -16,38 +20,48 @@ class Column {
 	
 	private $_isNull;
 	
-	/**
-	 * @return mixed
-	 */
-	public function getName():string {
-		return $this->_name;
+	public function __construct(
+		Table $table,
+		string $name,
+		$type,
+		bool $isNull = false,
+		$defaultValue = null,
+		?string $comment = null,
+		bool $isPrimary = false,
+		bool $isUnique = false
+	) {
+	
 	}
 	
-	/**
-	 * @return mixed
-	 */
-	public function getComment():string {
-		return $this->_comment;
+	public function readOnly(): bool {
+		// TODO: Implement readOnly() method.
 	}
 	
-	/**
-	 * @return mixed
-	 */
-	public function getDefaultValue() {
-		return $this->_defaultValue;
+	public function getTable(): Table {
+		// TODO: Implement getTable() method.
 	}
 	
-	/**
-	 * @return mixed
-	 */
-	public function getIsNull():bool {
-		return $this->_isNull;
+	public function type(): Type {
+		// TODO: Implement type() method.
 	}
 	
-	/**
-	 * @return mixed
-	 */
-	public function getType() {
-		return $this->_type;
+	public function isUnique(): bool {
+		// TODO: Implement isUnique() method.
+	}
+	
+	public function isPrimary(): bool {
+		// TODO: Implement isPrimary() method.
+	}
+	
+	public function typeName(): string {
+		// TODO: Implement typeName() method.
+	}
+	
+	public function typeInPhp(): string {
+		// TODO: Implement typeInPhp() method.
+	}
+	
+	public function isConvertType($oldType, $newType): bool {
+		// TODO: Implement isConvertType() method.
 	}
 }
